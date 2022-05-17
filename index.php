@@ -61,7 +61,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         }
     }
     if ((empty($_POST['country'])) || ($_POST['country'] == "")) {
-        $countryErr = "Sélectionnez une ville";
+        $countryErr = "Sélectionnez un pays";
         $bd = 0;
     } else {
         $country = $_POST['country'];
@@ -176,27 +176,30 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 
     if ($bd==1){
-		$servername = "localhost";
-		$username = "ayaberroukech";
-		$password = "ayaberroukech";
-		$dbname="tpwebav";
-		try {
-			$conn = new PDO("mysql:host=$servername;dbname=$dbname", 
-			$username, $password);
-			$conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-			var_dump($conn);
-			$sql = "INSERT INTO 
-			projettp(nom,prenom,email,country,cv,phone,affiliations,occupation,hexa,ip,talent,url,date,langage,pfe)VALUES 
-			('$nom','$prenom','$email','$country','$cv','$phone','$affiliations','$occupation','$hexa','$ip','$talent','$url','$date','$langage','$pfe')";
-			$conn->exec($sql);
 		
-		}
-		catch(PDOException $e) {
-		  echo "failed: " . $e->getMessage();
-		}
-	  $conn = null;
-     }
+$servername = "localhost";
+$username = "ayaberroukech";
+$password = "ayaberroukech";
+$dbname = "tpwebav";
+
+try {
+  $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
+  // set the PDO error mode to exception
+  $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+  $sql = "INSERT INTO 
+  projettp(nom,prenom,email,country,cv,phone,affiliations,occupation,hexa,ip,talent,url,date,langage,pfe)VALUES 
+  ('$nom','$prenom','$email','$country','$cv','$phone','$affiliations','$occupation','$hexa','$ip','$talent','$url','$date','$langage','$pfe')";
+  // use exec() because no results are returned
+  $conn->exec($sql);
+  echo "New record created successfully";
+} catch(PDOException $e) {
+  echo $sql . "<br>" . $e->getMessage();
+}
+
+$conn = null;
+
 	}
+}
 ?>
 
 <body>
