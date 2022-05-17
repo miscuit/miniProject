@@ -160,7 +160,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     } else {
         $langage = ($_POST['weapon']);
         if (!preg_match("/^[a-zA-Z-' ]*$/", $langage)) {
-            $nomErr = "Seules les lettres sont autorisées.";
+            $langageErr = "Seules les lettres sont autorisées.";
             $bd = 0;
         }
     }
