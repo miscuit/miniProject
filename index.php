@@ -186,7 +186,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 			$conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 			var_dump($conn);
 			$sql = "INSERT INTO 
-			projettp(nom,prenom,email,country,cv,phone,affiliations,occupation,hexa,ip,talent,url,date,langagepref,pfe)VALUES 
+			projettp(nom,prenom,email,country,cv,phone,affiliations,occupation,hexa,ip,talent,url,date,langage,pfe)VALUES 
 			('$nom','$prenom','$email','$country','$cv','$phone','$affiliations','$occupation','$hexa','$ip','$talent','$url','$date','$langage','$pfe')";
 			$conn->exec($sql);
 		
@@ -299,5 +299,4 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         </div>
     </div>
 </body>
-
 </html>
