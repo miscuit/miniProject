@@ -187,7 +187,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 			var_dump($conn);
 			$sql = "INSERT INTO 
 			projettp(nom,prenom,email,country,cv,phone,affiliations,occupation,hexa,ip,talent,url,date,langage,pfe)VALUES 
-			('$nom','$prenom','$email','$country','$cv','$phone','$affiliations','$occupation','$hexa','$ip','$talent,$url,$date,$langage,$pfe','$url','$date','$langage','$pfe')";
+			('$nom','$prenom','$email','$country','$cv','$phone','$affiliations','$occupation','$hexa','$ip','$talent','$url','$date','$langage','$pfe')";
 			$conn->exec($sql);
 		
 		}
@@ -221,7 +221,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     <span class="error"><?php echo "$prenomErr";?></span>
                     <label for="email">Email Address</label>
                     <input type="text" id="email" name="email" placeholder="aya@fso.ump.ma">
-                    <span class="error"><?php echo $emailErr;?></span>
+                    <span class="error"><?php echo "$emailErr";?></span>
                     <label for="country">Pays</label>
                     <select id="country" name="country">
                         <option>Choisir Pays</option>
@@ -235,7 +235,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 
                     </select>
-                    <span class="error"><?php echo $countryErr;?></span>
+                    <span class="error"><?php echo "$countryErr";?></span>
                     <label for="bio">CV</label>
                     <textarea id="bio" name="bio"></textarea>
                     <span class="error"><?php echo $cvErr;?></span>
@@ -243,10 +243,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 <div class="cbp-mc-column">
                     <label for="phone">Numero de telephone</label>
                     <input type="text" id="phone" name="phone" placeholder="+212 999 999">
-                    <span class="error"><?php echo $phoneErr;?></span>
+                    <span class="error"><?php echo "$phoneErr";?></span>
                     <label for="affiliations">Affiliations</label>
                     <textarea id="affiliations" name="affiliations"></textarea>
-                    <span class="error"><?php echo $affiliationsErr;?></span>
+                    <span class="error"><?php echo "$affiliationsErr";?></span>
                     <label>les cours</label>
                     <select id="occupation" name="occupation">
                         <option>Choisir la matière</option>
@@ -259,13 +259,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                         <option>Algoritmique</option>
 
                     </select>
-                    <span class="error"><?php echo $ocupationErr;?></span>
+                    <span class="error"><?php echo "$ocupationErr";?></span>
                     <label for="cat_name">choisir un nombre Hexadicimale</label>
                     <input type="text" id="cat_name" name="cat_name" placeholder="F0A3">
-                    <span class="error"><?php echo $hexaErr;?></span>
+                    <span class="error"><?php echo "$hexaErr";?></span>
                     <label for="gagdet">Choisir une adresse IP</label>
                     <input type="text" id="gagdet" name="gagdet" placeholder="193.200.10.132">
-                    <span class="error"><?php echo $ipErr;?></span>
+                    <span class="error"><?php echo "$ipErr";?></span>
                 </div>
                 <div class="cbp-mc-column">
                     <label>Vos talents en programmation</label>
@@ -280,19 +280,19 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                         <option>HTML</option>
 
                     </select>
-                    <span class="error"><?php echo $talentErr;?></span>
+                    <span class="error"><?php echo "$talentErr";?></span>
                     <label for="drink">Site web URL</label>
                     <input type="text" id="drink" name="drink" placeholder="www.fso.ump.ma">
-                    <span class="error"><?php echo $urlErr;?></span>
+                    <span class="error"><?php echo "$urlErr";?></span>
                     <label for="power">Votre date de naissance</label>
-                    <span class="error"><?php echo $dateErr;?></span>
+                    <span class="error"><?php echo "$dateErr";?></span>
                     <input type="text" id="power" name="power" placeholder="01/01/2000">
                     <label for="weapon">Langage de Programation préféré</label>
                     <input type="weapon" id="weapon" name="weapon" placeholder="PHP">
-                    <span class="error"><?php echo $langueErr;?></span>
+                    <span class="error"><?php echo "$langueErr";?></span>
                     <label for="comments">Dites A propos de votre PFE</label>
                     <textarea id="comments" name="comments"></textarea>
-                    <span class="error"><?php echo $pfeErr;?></span>
+                    <span class="error"><?php echo "$pfeErr";?></span>
                 </div>
                 <div class="cbp-mc-submit-wrap"><input class="cbp-mc-submit" type="submit" value="Enregistrer " /></div>
             </form>
