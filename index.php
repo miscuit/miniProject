@@ -16,7 +16,7 @@
 </head>
 <?php
 $nomErr = $prenomErr = $emailErr = $countryErr = $bioErr = $cvErr = $urlErr = $talentErr = $dateErr = "";
-$langueErr = $pfeErr = $hexaErr = $ipErr = $phoneErr = $ocupationErr = "";
+$langueErr = $pfeErr = $hexaErr = $ipErr = $phoneErr = $ocupationErr = $affiliations = "";
 $nom = $prenom = $cv = $affiliations = $occupation = $date = $pfe = $hexa = $url = $ip = $phone = $langage = $age = $email = "";
 $bd = 0;
 
