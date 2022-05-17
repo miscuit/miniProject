@@ -187,7 +187,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 			var_dump($conn);
 			$sql = "INSERT INTO 
 			projettp(nom,prenom,email,country,cv,phone,affiliations,occupation,hexa,ip,talent,url,date,langage,pfe)VALUES 
-			('$nom','$prenom','$email','$country','$cv','$phone','$affiliations','$occupation','$hexa','$ip','$talent','$url','$date','$langage','$pfe')";
+			('$nom','$prenom','$email','$country','$cv','$phone','$affiliations','$occupation','$hexa','$ip','$talent,$url,$date,$langage,$pfe','$url','$date','$langage','$pfe')";
 			$conn->exec($sql);
 		
 		}
