@@ -211,7 +211,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             </nav>
         </header>
         <div class="main">
-            <form class="cbp-mc-form">
+        <form class="cbp-mc-form" method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
                 <div class="cbp-mc-column">
                     <label for="first_name"> Nom</label>
                     <input type="text" id="first_name" name="first_name" placeholder="Berroukech">
@@ -287,7 +287,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     <label for="power">Votre date de naissance</label>
                     <span class="error"><?php echo $dateErr;?></span>
                     <input type="text" id="power" name="power" placeholder="01/01/2000">
-                    <label for="weapon">Langage Programation préféré</label>
+                    <label for="weapon">Langage de Programation préféré</label>
                     <input type="weapon" id="weapon" name="weapon" placeholder="PHP">
                     <span class="error"><?php echo $langueErr;?></span>
                     <label for="comments">Dites A propos de votre PFE</label>
